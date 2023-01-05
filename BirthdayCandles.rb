@@ -10,12 +10,14 @@
 def birthday_cake_candles(candles)
   sorted_candles = candles.sort()
   count = 0
-  sorted_candles.each do |num|
-    if num === sorted_candles.length-1
-      count += 1
+  i = 0
+  while i < sorted_candles.length
+    if sorted_candles[i] === sorted_candles[sorted_candles.length-1]
+      count += 1  
     end
+    i += 1
   end
   p count
 end
 
-birthday_cake_candles([3, 2, 1, 3])
+birthday_cake_candles([4, 4, 1, 3])
