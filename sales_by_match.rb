@@ -1,4 +1,4 @@
-def sock_merchant(n, ar)
+def sock_merchant(_n, ar)
   # 
   count = []
   sorted = ar.sort()
