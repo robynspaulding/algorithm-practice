@@ -39,18 +39,39 @@ def string_to_hash(string)
     letters_hash[letter] += 1
     index += 1
   end
-  p letters_hash
+  # p letters_hash
 end
 string_to_hash("bookkeeper")
 
 #  4. Convert a hash into an array of arrays.
 #     For example, {"chair" => 100, "book" => 14} becomes [["chair", 100], ["book", 14]].
 
+def hash_to_array(hash)
+  array = []
+  hash.each do|name, num|
+    array << [name, num]
+  end
+  # p array
+end
+hash_to_array({"chair" => 100, "book" => 14})
+
 #  5. Convert a hash into an array of hashes using the keys from each hash as the :id key in each of the array's hashes.
 #     For example, {321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}} becomes [{id: 321, name: "Alice", age: 31}, {id: 322, name: "Maria", age: 27}].
 
+def hash_to_array_of_hashes(hash)
+  array = []
+  hash.each do |id, person|
+    person[:id] = id
+    array << person
+  end
+  # p array
+end
+
+hash_to_array_of_hashes({321 => {name: "Alice", age: 31}, 322 => {name: "Maria", age: 27}})
+
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
+
 
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
