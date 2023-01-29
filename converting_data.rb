@@ -72,9 +72,35 @@ hash_to_array_of_hashes({321 => {name: "Alice", age: 31}, 322 => {name: "Maria",
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
+def strings_to_hash(array)
+  word_frequency = {}
+  index = 0
+  while index < array.length
+    word = array[index] 
+    if word_frequency[word] == nil
+      word_frequency[word] = 1
+    else
+      word_frequency[word] += 1
+    end
+    index += 1
+  end
+  # p word_frequency
+end
+
+strings_to_hash(["do", "or", "do", "not"])
 
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
+
+def hash_to_flat_array(hash)
+  result = []
+  hash.each do |key, val|
+    result << key
+    result << val
+  end
+  p result
+end
+hash_to_flat_array({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
