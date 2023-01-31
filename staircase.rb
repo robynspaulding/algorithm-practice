@@ -1,12 +1,18 @@
 def staircase(n)
-  # so i basically want a # in the last spot, then the last two spots, etc the length of the array is n
-  #so i'm thinking if I iterated backwards through the array and make the current element a # and push the them into a new array
-  
-  while n > 0
-    p 
-    n -= 1
+  # I want the first line to have n - hash_var=space_var number of space and 1 #
+  # var_result prepend hash_var*"#"
+  # var_result prepend space_var*" "
+  # print result
+  # increment hash_var
+  hash = 1
+  n.times do
+    result = ""
+    spaces = n - hash 
+    result.prepend("#"*hash)
+    result.prepend(" "*spaces)
+    puts result
+    hash += 1
   end
 
 end
-
 staircase(6)
