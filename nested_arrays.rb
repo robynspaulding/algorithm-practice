@@ -15,6 +15,18 @@ flattened([[1, 3], [8, 9], [2, 16]])
 #  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 #     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
 
+def combined_strings(ar1, ar2)
+  result = []
+  ar1.each do |letter1|
+    ar2.each do |letter2|
+      letters = letter1+letter2
+      result << letters
+    end
+  end
+  p result
+end
+combined_strings(["a", "b", "c"], ["d", "e", "f", "g"] )
+
 #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
 
