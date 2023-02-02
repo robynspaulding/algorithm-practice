@@ -44,12 +44,29 @@ def combos(array)
     end
     index1 +=1
   end
-  p result
+  # p result
 end
 combos(["a", "b", "c", "d"] )
 
 #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
+
+def max_product(num_array)
+  max_product = num_array[0]*num_array[1]
+  i = 0
+  while i < num_array.length
+    j = 0
+    while j < num_array.length
+      if i != j && num_array[i]*num_array[j] > max_product 
+        max_product = num_array[i]*num_array[j]
+      end
+      j+=1
+    end
+    i += 1
+  end
+  p max_product
+end
+max_product([5, -2, 1, -9, -7, 2, 6])
 
 #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
