@@ -8,7 +8,7 @@ def flattened(arrays)
       result << num
     end
   end
-  p result
+  # p result
 end
 flattened([[1, 3], [8, 9], [2, 16]])
 
@@ -23,12 +23,30 @@ def combined_strings(ar1, ar2)
       result << letters
     end
   end
-  p result
+  # p result
 end
 combined_strings(["a", "b", "c"], ["d", "e", "f", "g"] )
 
 #  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 #     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+
+def combos(array)
+  result = []
+  index1 = 0
+  
+  while index1 < array.length
+    index2 = 0
+    while index2 < array.length
+      if index1 != index2
+        result << array[index1]+ array[index2]
+      end
+      index2 += 1
+    end
+    index1 +=1
+  end
+  p result
+end
+combos(["a", "b", "c", "d"] )
 
 #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
