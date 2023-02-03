@@ -78,12 +78,23 @@ def sum(arrays)
       result += num
     end
   end
-  p result
+  # p result
 end
 sum([[1, 3], [8, 9], [2, 16]])
 
 #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+
+def array_sums(ar1, ar2)
+  result = []
+  ar1.each do |num1|
+    ar2.each do |num2|
+      result << num1+num2
+    end
+  end
+  # p result
+end
+array_sums([1, 2], [6, 7, 8])
 
 #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
