@@ -132,12 +132,29 @@ def largest_sum(array)
     end
     index1+=1
   end
-  p largest_sum
+  # p largest_sum
 end
 largest_sum([1, 8, 3, 10])
 
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+
+def sum_ten(array)
+  result = []
+  index1 = 0
+  while index1 < array.length
+    index2 = 0
+    while index2 < array.length
+      if index1 != index2 && array[index1]+array[index2] === 10
+        result << array[index1] # not sure why this doesn't need array[index2] to be pushed in as well... but it works
+      end
+      index2+=1
+    end
+    index1+=1
+  end
+  p result
+end
+sum_ten([2, 5, 3, 1, 0, 7, 11])
 
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
