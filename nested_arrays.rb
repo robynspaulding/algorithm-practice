@@ -152,9 +152,20 @@ def sum_ten(array)
     end
     index1+=1
   end
-  p result
+  # p result
 end
 sum_ten([2, 5, 3, 1, 0, 7, 11])
 
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+def to_string(arrays)
+  result = ""
+
+  arrays.each do |array|
+    array.each do |word|
+      result << word
+    end
+  end
+  p result
+end
+to_string([["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]])
