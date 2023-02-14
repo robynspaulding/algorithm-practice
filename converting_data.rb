@@ -98,12 +98,29 @@ def hash_to_flat_array(hash)
     result << key
     result << val
   end
-  p result
+  # p result
 end
 hash_to_flat_array({"a" => 1, "b" => 2, "c" => 3, "d" => 4})
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
+
+def combined_info(hash, array) 
+  result = {}
+  index = 0
+  while index < array.length
+    item = array[index]
+    name = item[:name]
+    color = item[:color]
+    weight = item[:weight]
+    price = hash[name]
+    result[name] = { price: price, color: color, weight: weight}
+    index += 1
+  end
+  p result
+end
+combined_info({"chair" => 75, "book" => 15}, [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}])
+
 
 #  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 #     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
