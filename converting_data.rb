@@ -135,10 +135,19 @@ def arrays_to_hashes(array)
     end
     result[author] << title
   end
-  p result
+  # p result
 end
 
 arrays_to_hashes([{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}])
 
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+
+def hash_new(hash)
+  new_hash = {}
+  hash.each do |key, value|
+    new_hash[value] = key
+  end
+  p new_hash
+end
+hash_new({"a" => 1, "b" => 2, "c" => 3})
