@@ -117,13 +117,28 @@ def combined_info(hash, array)
     result[name] = { price: price, color: color, weight: weight}
     index += 1
   end
-  p result
+  # p result
 end
 combined_info({"chair" => 75, "book" => 15}, [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}])
 
 
 #  9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 #     For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
+
+def arrays_to_hashes(array)
+  result = {}
+  array.each do |book|
+    author = book[:author]
+    title = book[:title]
+    if result[author] == nil
+      result[author] = []
+    end
+    result[author] << title
+  end
+  p result
+end
+
+arrays_to_hashes([{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}])
 
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
