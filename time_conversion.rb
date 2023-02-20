@@ -13,12 +13,7 @@
 
 def time_conversion(s)
   # Write your code here
-  result = ""
-  if s[s.length-2] === "A" && s[0] !== "1" && s[1] !== "2"
-    result += s.slice(0...8)
-  end
-#  , s[s.length-1]
-  p result
+  
 end
 
 time_conversion("07:05:45AM")
