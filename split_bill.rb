@@ -1,4 +1,4 @@
-def bonAppetit(bill, k, b)
+def bon_appetit(bill, k, b)
   # Write your code here
   # anna_total variable
   # loop through bill 
@@ -11,10 +11,10 @@ def bonAppetit(bill, k, b)
   anna_total = 0
   index = 0
   while index < bill.length
-      if index != k
-          anna_total += bill[index]
-      end
-      index += 1  
+    if index != k
+      anna_total += bill[index]
+    end
+    index += 1  
   end
   if anna_total/2 == b
     p "Bon Appetit"
