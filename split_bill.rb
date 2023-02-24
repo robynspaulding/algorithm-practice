@@ -17,10 +17,11 @@ def bonAppetit(bill, k, b)
       index += 1  
   end
   if anna_total/2 == b
-      p "Bon Appetit"
+    p "Bon Appetit"
   else
-      p anna_total/2 - b
+    remainder = anna_total/2 - b
+    puts remainder.abs()
   end
 end
 
-bonAppetit([3, 10, 2, 9], 1, 7)
+bonAppetit([3, 10, 2, 9], 1, 12)
