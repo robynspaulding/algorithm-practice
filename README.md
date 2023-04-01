@@ -1,2 +1,2 @@
-# HackerRank-solutions
+# algorithm-practice
 h
