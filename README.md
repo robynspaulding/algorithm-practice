@@ -1,2 +1,2 @@
-# HackerRank-solutions
-h
+# algorithm-practice
+
