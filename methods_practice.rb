@@ -34,6 +34,12 @@ p sum2
 
 # 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
 
+puts "enter one word"
+word3 = gets.chomp
+puts "enter another word"
+word4 = gets.chomp
+p word3.upcase + " " + word4.upcase
+
 # 7. Write a program that asks the user to enter a word, then prints the number of letters in the word.
 
 # 8. Write a program that asks the user to enter a number, then prints "That's a negative number" if the number is less than 0.
