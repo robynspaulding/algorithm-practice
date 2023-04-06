@@ -56,4 +56,11 @@ end
 
 # 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
 
+puts "enter a number"
+num5 = gets.chomp
+puts "enter a second number"
+num6 = gets.chomp
+p num5.to_i * num6.to_i
+
+
 # 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
