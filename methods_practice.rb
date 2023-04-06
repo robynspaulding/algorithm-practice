@@ -64,3 +64,9 @@ p num5.to_i * num6.to_i
 
 
 # 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
+
+puts "enter a word"
+word6 = gets.chomp
+if word6.length > 5
+  puts "That's a long word"
+end
