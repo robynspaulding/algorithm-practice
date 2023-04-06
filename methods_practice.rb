@@ -13,6 +13,13 @@ end
 
 # 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
 
+puts "enter one number"
+num1 = gets.chomp
+puts "enter another number"
+num2 = gets.chomp
+sum = num1.to_i + num2.to_i
+p sum
+
 # 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
 
 # 5. Write a program that asks the user to enter a number, then prints the number times 10.
