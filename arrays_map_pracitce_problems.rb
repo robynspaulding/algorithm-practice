@@ -43,6 +43,13 @@ p new_arr
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
 
+salutations = ["hello", "goodbye"]
+sal_length = []
+salutations.each do |word|
+  sal_length.push(word.length)
+end 
+p sal_length
+
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
 
