@@ -33,6 +33,13 @@ p names
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
+arr = [1, 2, 3]
+new_arr = []
+arr.each do |num|
+  new_arr.push(num+7)
+end
+p new_arr
+
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
 
