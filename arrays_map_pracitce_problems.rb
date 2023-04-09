@@ -4,7 +4,7 @@
 ar = [1, 2, 3]
 new_ar = []
 ar.each do |num|
-  new_ar.push(num*3)
+  new_ar << num*3
 end
 p new_ar
 
@@ -15,7 +15,7 @@ p new_ar
 strings = ["hello", "goodbye"]
 new_strings = []
 strings.each do |string|
-  new_strings.push(string.upcase)
+  new_strings << string.upcase
 end
 p new_strings
 
@@ -26,7 +26,7 @@ hashes = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
 names = []
 
 hashes.each do |hash|
-  names.push(hash[:name])
+  names << hash[:name]
 end
 p names
 
@@ -36,7 +36,7 @@ p names
 arr = [1, 2, 3]
 new_arr = []
 arr.each do |num|
-  new_arr.push(num+7)
+  new_arr << num+7
 end
 p new_arr
 
@@ -46,7 +46,7 @@ p new_arr
 salutations = ["hello", "goodbye"]
 sal_length = []
 salutations.each do |word|
-  sal_length.push(word.length)
+  sal_length << word.length
 end 
 p sal_length
 
@@ -56,12 +56,19 @@ p sal_length
 hashes2 = [{name: "Alice", age: 27}, {name: "Blane", age: 16}]
 ages= []
 hashes2.each do |hash|
-  ages.push(hash[:age])
+  ages << hash[:age]
 end
 p ages
 
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
+
+nums = [1, 2, 3]
+result = []
+nums.each do |num|
+  result << num / 2.0
+end
+p result
 
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
