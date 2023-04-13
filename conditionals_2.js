@@ -25,3 +25,25 @@ if (nums[0] < 10 && nums[1] < 10) {
 } else {
   console.log(0);
 }
+
+// 4. Use a variable to store a number, then write a condition that prints 1 if the number is over 9000, and prints -1 otherwise.
+
+var num3 = 90;
+if (num3 > 9000) {
+  console.log(1);
+} else {
+  console.log(-1);
+}
+
+// 5. Use a variable to store a number, then write a condition that prints 9 if the number is less than 10, prints 19 if the number is less than 20, prints 29 if the number is less than 30, and prints -1 otherwise (only one print statement should occur).
+
+var number = 15;
+if (number < 10) {
+  console.log(9);
+} else if (number < 20) {
+  console.log(19);
+} else if (number < 30) {
+  console.log(29);
+} else {
+  console.log(-1);
+}
