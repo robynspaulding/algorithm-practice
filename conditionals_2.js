@@ -16,3 +16,12 @@ if (num2 < 10) {
 } else {
   console.log(0);
 }
+
+// 3. Use variables to store two numbers, then write a condition that prints 1 if the numbers are both less than 10, and prints 0 otherwise.
+
+var nums = [11, 2];
+if (nums[0] < 10 && nums[1] < 10) {
+  console.log(1);
+} else {
+  console.log(0);
+}
