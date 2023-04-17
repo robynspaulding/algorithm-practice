@@ -13,7 +13,29 @@
 
 def time_conversion(s)
   # Write your code here
-  
+  elements = s.split('')
+
+  if elements[8] == "A" && elements[0] == "1" && elements[1]== "2"
+    elements[0] = "0"
+    elements[1] = "0"
+    midnight =elements[0]+ elements[1]+elements[2]+elements[3]+elements[4]+elements[5]+elements[6]+elements[7]
+    p  midnight
+  elsif elements[8] == "P" && elements[0] == "1" && elements[1]== "2"
+    s.delete! "PM"
+    p s
+  elsif elements[8] == "A"
+    s.delete! "AM"   
+    p s
+  elsif elements[8] == "P"
+    h = elements[0]+elements[1]
+    hour = h.to_i + 12
+
+    time = hour.to_s+elements[2]+elements[3]+elements[4]+elements[5]+elements[6]+elements[7]
+    p time
+  end
 end
 
 time_conversion("07:05:45AM")
+time_conversion("07:05:45PM")
+time_conversion("12:05:45AM")
+time_conversion("12:45:54PM")
