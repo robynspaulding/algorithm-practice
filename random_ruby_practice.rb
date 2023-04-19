@@ -70,8 +70,18 @@ while i < a.length
   end
   i += 1
 end
-p anna_points, bob_points
+# p anna_points, bob_points
 end
 
 
 comare_triplets([5, 6, 7], [3, 6, 10])
+
+
+def a_very_big_sum(arr)
+  sum = 0
+  arr.each do |num|
+    sum += num
+  end
+  p sum
+end
+a_very_big_sum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005  ])
