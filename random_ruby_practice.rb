@@ -82,6 +82,38 @@ def a_very_big_sum(arr)
   arr.each do |num|
     sum += num
   end
-  p sum
+  # p sum
 end
 a_very_big_sum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005  ])
+
+# Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
+
+# need to know, length of the array, how many nums are positive, negative and 0
+#loop through the array and 
+# keep a count of each type of number: positive, negative and 0
+# take those variables and divide them by the length of the array to get the average
+#return the average up to six decimal places
+
+def plus_minus(array)
+  positive_nums = 0
+  negative_nums = 0
+  zero_nums = 0
+  array.each do |num|
+    if num > 0
+      positive_nums += 1
+    elsif num < 0
+      negative_nums += 1
+    else 
+      zero_nums += 1
+    end
+  end
+  length = array.length
+  positives= positive_nums.to_f / length 
+  negatives = negative_nums.to_f / length
+  zeros = zero_nums.to_f / length 
+
+  puts positives.round(6)
+  puts negatives.round(6)
+  puts zeros.round(6)
+end
+plus_minus([1, 1, 0, -1, -1]) # 0.400000,0.400000, 0.200000
