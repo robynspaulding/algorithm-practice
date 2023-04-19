@@ -48,7 +48,30 @@ def simple_array_sum(ar)
   ar.each do |num|
     sum += num
   end
-  p sum
+  # p sum
 end
 
 simple_array_sum([1, 2, 3, 4, 10, 10]) # 31
+
+
+def comare_triplets(a, b)
+ # variables to count anna's points and bob's points
+ # loop through each array and compare the elements at the matching indeices, if a is greater anna gets a point and vice versa
+ # return the number of points anna and bob earned
+
+anna_points = 0
+bob_points = 0
+i = 0
+while i < a.length
+  if a[i] < b[i]
+    bob_points += 1
+  elsif a[i] > b[i]
+    anna_points += 1
+  end
+  i += 1
+end
+p anna_points, bob_points
+end
+
+
+comare_triplets([5, 6, 7], [3, 6, 10])
