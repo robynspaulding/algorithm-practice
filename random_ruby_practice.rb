@@ -94,11 +94,11 @@ a_very_big_sum([1000000001, 1000000002, 1000000003, 1000000004, 1000000005  ])
 # take those variables and divide them by the length of the array to get the average
 #return the average up to six decimal places
 
-def plus_minus(array)
+def plus_minus(arr)
   positive_nums = 0
   negative_nums = 0
   zero_nums = 0
-  array.each do |num|
+  arr.each do |num|
     if num > 0
       positive_nums += 1
     elsif num < 0
@@ -107,7 +107,7 @@ def plus_minus(array)
       zero_nums += 1
     end
   end
-  length = array.length
+  length = arr.length
   positives= positive_nums.to_f / length 
   negatives = negative_nums.to_f / length
   zeros = zero_nums.to_f / length 
