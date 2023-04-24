@@ -5,52 +5,57 @@ var ar1 = [
   [8, 9],
   [2, 16],
 ];
-var result = [];
-for (var i = 0; i < ar1.length; i++) {
-  for (var j = 0; j < ar1[i].length; j++) {
-    result.push(ar1[i][j]);
+function flattenedArray(ar1) {
+  var result = [];
+  for (var i = 0; i < ar1.length; i++) {
+    for (var j = 0; j < ar1[i].length; j++) {
+      result.push(ar1[i][j]);
+    }
   }
+  console.log(result);
 }
-console.log(result);
-
 //  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 //     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
 var ar2 = ["a", "b", "c"];
 var ar3 = ["d", "e", "f", "g"];
-var result2 = [];
-for (var i = 0; i < ar2.length; i++) {
-  for (var j = 0; j < ar3.length; j++) {
-    result2.push(ar2[i] + ar3[j]);
+function combinedStr(ar2, ar3) {
+  var result2 = [];
+  for (var i = 0; i < ar2.length; i++) {
+    for (var j = 0; j < ar3.length; j++) {
+      result2.push(ar2[i] + ar3[j]);
+    }
   }
+  console.log(result2);
 }
-console.log(result2);
-
 //  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 //     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
 var ar4 = ["a", "b", "c", "d"];
-var result3 = [];
-for (var i = 0; i < ar4.length; i++) {
-  for (var j = 0; j < ar4.length; j++) {
-    if (i !== j) {
-      result3.push(ar4[i] + ar4[j]);
+function everyOtherStrCombo(ar4) {
+  var result3 = [];
+  for (var i = 0; i < ar4.length; i++) {
+    for (var j = 0; j < ar4.length; j++) {
+      if (i !== j) {
+        result3.push(ar4[i] + ar4[j]);
+      }
     }
   }
+  console.log(result3);
 }
-console.log(result3);
-
 //  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 //     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
 
 var ar5 = [5, -2, 1, -9, -7, 2, 6];
-var result4 = ar5[0] * ar5[1];
-for (var i = 0; i < ar5.length; i++) {
-  for (var j = 0; j < ar5.length; j++) {
-    if (ar5[i] * ar5[j] > result4 && i !== j) {
-      result4 = ar5[i] * ar5[j];
+function largestProduct(ar5) {
+  var result4 = ar5[0] * ar5[1];
+  for (var i = 0; i < ar5.length; i++) {
+    for (var j = 0; j < ar5.length; j++) {
+      if (ar5[i] * ar5[j] > result4 && i !== j) {
+        result4 = ar5[i] * ar5[j];
+      }
     }
   }
+  console.log(result4);
 }
-console.log(result4);
 
 //  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 //     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
