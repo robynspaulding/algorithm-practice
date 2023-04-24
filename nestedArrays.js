@@ -12,8 +12,18 @@ for (var i = 0; i < ar1.length; i++) {
   }
 }
 console.log(result);
+
 //  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 //     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
+var ar2 = ["a", "b", "c"];
+var ar3 = ["d", "e", "f", "g"];
+var result2 = [];
+for (var i = 0; i < ar2.length; i++) {
+  for (var j = 0; j < ar3.length; j++) {
+    result2.push(ar2[i] + ar3[j]);
+  }
+}
+console.log(result2);
 
 //  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 //     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
