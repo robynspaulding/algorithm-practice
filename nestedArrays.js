@@ -41,6 +41,17 @@ console.log(result3);
 //  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 //     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
 
+var ar5 = [5, -2, 1, -9, -7, 2, 6];
+var result4 = ar5[0] * ar5[1];
+for (var i = 0; i < ar5.length; i++) {
+  for (var j = 0; j < ar5.length; j++) {
+    if (ar5[i] * ar5[j] > result4 && i !== j) {
+      result4 = ar5[i] * ar5[j];
+    }
+  }
+}
+console.log(result4);
+
 //  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 //     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
