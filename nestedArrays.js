@@ -27,6 +27,16 @@ console.log(result2);
 
 //  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 //     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+var ar4 = ["a", "b", "c", "d"];
+var result3 = [];
+for (var i = 0; i < ar4.length; i++) {
+  for (var j = 0; j < ar4.length; j++) {
+    if (i !== j) {
+      result3.push(ar4[i] + ar4[j]);
+    }
+  }
+}
+console.log(result3);
 
 //  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 //     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
