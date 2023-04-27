@@ -1,11 +1,11 @@
 //  1. Use a nested loop to convert an array of number pairs into a single flattened array.
 //     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
 
-function flattenedArray(ar1) {
+function flattenedArray(ar) {
   var result = [];
-  for (var i = 0; i < ar1.length; i++) {
-    for (var j = 0; j < ar1[i].length; j++) {
-      result.push(ar1[i][j]);
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar[i].length; j++) {
+      result.push(ar[i][j]);
     }
   }
   return result;
@@ -20,11 +20,11 @@ console.log(
 //  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 //     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
 
-function combinedStr(ar2, ar3) {
+function combinedStr(ar, ar2) {
   var result = [];
-  for (var i = 0; i < ar2.length; i++) {
-    for (var j = 0; j < ar3.length; j++) {
-      result.push(ar2[i] + ar3[j]);
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar2.length; j++) {
+      result.push(ar[i] + ar2[j]);
     }
     return result;
   }
@@ -32,18 +32,20 @@ function combinedStr(ar2, ar3) {
 console.log(combinedStr(["a", "b", "c"], ["d", "e", "f", "g"]));
 //  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 //     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
-var ar4 = ["a", "b", "c", "d"];
-function everyOtherStrCombo(ar4) {
-  var result3 = [];
-  for (var i = 0; i < ar4.length; i++) {
-    for (var j = 0; j < ar4.length; j++) {
+
+function everyOtherStrCombo(ar) {
+  var result = [];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar.length; j++) {
       if (i !== j) {
-        result3.push(ar4[i] + ar4[j]);
+        result.push(ar[i] + ar[j]);
       }
     }
   }
-  console.log(result3);
+  return result;
 }
+console.log(everyOtherStrCombo(["a", "b", "c", "d"]));
+
 //  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 //     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
 
