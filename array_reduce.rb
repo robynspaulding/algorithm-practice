@@ -121,7 +121,7 @@ def max_num(array)
       max_num = num
     end
   end
-  # p max_num
+  p max_num
 end
 
 max_num([5, 10, 8, 3])

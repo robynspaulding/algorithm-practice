@@ -1,10 +1,6 @@
 //  1. Use a nested loop to convert an array of number pairs into a single flattened array.
 //     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
-var ar1 = [
-  [1, 3],
-  [8, 9],
-  [2, 16],
-];
+
 function flattenedArray(ar1) {
   var result = [];
   for (var i = 0; i < ar1.length; i++) {
@@ -12,21 +8,28 @@ function flattenedArray(ar1) {
       result.push(ar1[i][j]);
     }
   }
-  console.log(result);
+  return result;
 }
+console.log(
+  flattenedArray([
+    [1, 3],
+    [8, 9],
+    [2, 16],
+  ])
+);
 //  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
 //     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
-var ar2 = ["a", "b", "c"];
-var ar3 = ["d", "e", "f", "g"];
+
 function combinedStr(ar2, ar3) {
-  var result2 = [];
+  var result = [];
   for (var i = 0; i < ar2.length; i++) {
     for (var j = 0; j < ar3.length; j++) {
-      result2.push(ar2[i] + ar3[j]);
+      result.push(ar2[i] + ar3[j]);
     }
+    return result;
   }
-  console.log(result2);
 }
+console.log(combinedStr(["a", "b", "c"], ["d", "e", "f", "g"]));
 //  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
 //     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
 var ar4 = ["a", "b", "c", "d"];
@@ -58,7 +61,20 @@ function largestProduct(ar5) {
 }
 
 //  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
-//     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
+var ar6 = [
+  [1, 3],
+  [8, 9],
+  [2, 16],
+]; // becomes 39.
+function sumOfAllNumberParis(ar6) {
+  var sum = 0;
+  for (var i = 0; i < ar6.length; i++) {
+    for (var j = 0; j < ar6[i].length; j++) {
+      sum += ar6[j];
+    }
+  }
+  console.log(sum);
+}
 
 //  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 //     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
