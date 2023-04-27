@@ -49,34 +49,36 @@ console.log(everyOtherStrCombo(["a", "b", "c", "d"]));
 //  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 //     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
 
-var ar5 = [5, -2, 1, -9, -7, 2, 6];
-function largestProduct(ar5) {
-  var result4 = ar5[0] * ar5[1];
-  for (var i = 0; i < ar5.length; i++) {
-    for (var j = 0; j < ar5.length; j++) {
-      if (ar5[i] * ar5[j] > result4 && i !== j) {
-        result4 = ar5[i] * ar5[j];
+function largestProduct(ar) {
+  var result = ar[0] * ar[1];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar.length; j++) {
+      if (ar[i] * ar[j] > result && i !== j) {
+        result = ar[i] * ar[j];
       }
     }
   }
-  console.log(result4);
+  return result;
 }
+console.log(largestProduct([5, -2, 1, -9, -7, 2, 6]));
 
 //  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
-var ar6 = [
-  [1, 3],
-  [8, 9],
-  [2, 16],
-]; // becomes 39.
-function sumOfAllNumberParis(ar6) {
+function sumOfAllNumberParis(ar) {
   var sum = 0;
-  for (var i = 0; i < ar6.length; i++) {
-    for (var j = 0; j < ar6[i].length; j++) {
-      sum += ar6[j];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar[i].length; j++) {
+      sum += ar[i][j];
     }
   }
-  console.log(sum);
+  return sum;
 }
+console.log(
+  sumOfAllNumberParis([
+    [1, 3],
+    [8, 9],
+    [2, 16],
+  ])
+); // becomes 39.
 
 //  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 //     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
