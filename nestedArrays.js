@@ -111,6 +111,19 @@ console.log(productOfEachNum([2, 8, 3]));
 //  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 //     For example, [1, 8, 3, 10] becomes 18.
 
+function largestSum(ar) {
+  var biggestSum = ar[0] + ar[1];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar.length; j++) {
+      if (ar[i] !== ar[j] && ar[i] + ar[j] > biggestSum) {
+        biggestSum = ar[i] + ar[j];
+      }
+    }
+  }
+  return biggestSum;
+}
+console.log(largestSum([1, 8, 3, 10]));
+
 //  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 //     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
