@@ -83,6 +83,16 @@ console.log(
 //  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 //     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
 
+function sumOfEachArray(ar1, ar2) {
+  var arraySum = [];
+  for (var i = 0; i < ar1.length; i++) {
+    for (var j = 0; j < ar2.length; j++) {
+      arraySum.push(ar1[i] + ar2[j]);
+    }
+  }
+  return arraySum;
+}
+console.log(sumOfEachArray([1, 2], [6, 7, 8]));
 //  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 //     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
 
