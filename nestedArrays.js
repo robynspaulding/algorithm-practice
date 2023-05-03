@@ -93,8 +93,20 @@ function sumOfEachArray(ar1, ar2) {
   return arraySum;
 }
 console.log(sumOfEachArray([1, 2], [6, 7, 8]));
+
 //  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 //     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
+
+function productOfEachNum(ar) {
+  var product = [];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar.length; j++) {
+      product.push(ar[i] * ar[j]);
+    }
+  }
+  return product;
+}
+console.log(productOfEachNum([2, 8, 3]));
 
 //  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 //     For example, [1, 8, 3, 10] becomes 18.
