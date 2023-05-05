@@ -127,5 +127,34 @@ console.log(largestSum([1, 8, 3, 10]));
 //  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 //     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
+function sumTen(ar) {
+  var result = [];
+  for (var i = 0; i < ar.length; i++) {
+    for (var j = 0; j < ar.length; j++) {
+      if (ar[i] !== ar[j] && ar[i] + ar[j] === 10) {
+        result.push(ar[i]); //not sure why this doesn't need ar[j] to be pushed in as well but it works
+      }
+    }
+  }
+  if (result.length === 0) {
+    return false;
+  } else {
+    return result;
+  }
+}
+console.log(sumTen([2, 5, 3, 1, 0, 7, 11]));
+
 // 10. Use a nested loop to convert an array of string arrays into a single string.
 //     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+function stringsToString(array) {
+  console.log(array);
+  var resultString = "";
+  for (var i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[i].length; j++) {
+      resultString += array[j].join(""); //the .join("") removes the commas i was seeing when just += the array[j]
+    }
+  }
+  return resultString;
+}
+console.log(stringsToString([["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]));
