@@ -6,3 +6,11 @@
 # Return k.
 
 
+def remove_duplicates(nums)
+
+  #look at the nums array and keep the unique characters
+  nums.uniq!
+  
+  #return the length of the array with duplicates removed
+  nums.length
+end
