@@ -26,3 +26,13 @@ def remove_element(nums, val)
   nums.delete(val)
   p nums.size
 end
+
+# Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+# A word is a maximal 
+# substring
+#  consisting of non-space characters only.
+def length_of_last_word(s)
+  words = s.split(" ")
+  p words[words.length-1].length
+end
