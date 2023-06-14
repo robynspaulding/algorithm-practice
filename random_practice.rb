@@ -82,10 +82,21 @@ sum = num1.to_i + num2.to_i
 p sum
 # 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
 
-puts "write a word"
+puts "type a word"
 word = gets.chomp 
 p word.reverse
 
 # 5. Write a program that asks the user to enter a number, then prints the number times 10.
 
-# 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
+puts "type a number"
+
+num = gets.chomp
+p num.to_i * 10
+
+6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
+
+puts "write two words, hit enter in between them"
+
+word1 = gets.chomp
+word2 = gets.chomp
+p "#{word1.upcase}#{word2.upcase}"
