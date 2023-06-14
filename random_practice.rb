@@ -27,3 +27,45 @@ nums.each do |num|
   end
 end
 p smallest
+
+# 6. Write a function that takes in three strings and returns a string that combines all three strings with spaces in between. Then run the function and print the result.
+
+def strings_combined(str1, str2, str3)
+  result = "#{str1} #{str2} #{str3}"
+  p result
+end
+strings_combined("Hi", "how", "are you?")
+
+# 7. Write a function that takes in a number and returns the number as a string. Then run the function and print the result.
+
+def num_to_str(num)
+  str = num.to_s
+  p str
+end
+num_to_str(4)
+
+
+# 9. Write a function that takes in an array of numbers and returns the average (the sum divided by the size of the array). Then run the function and print the result.
+
+def average(num_array)
+  sum = 0
+  num_array.each do |num|
+    sum += num 
+  end 
+
+  size = num_array.length
+
+  avgerage = sum / size
+   
+  p avgerage
+
+end
+average([2, 4, 18]) # returns 8
+
+# 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
+
+def ten_thirty(num)
+  result = (num*10)+30
+  p result
+end
+ten_thirty(290) #2930
