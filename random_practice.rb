@@ -71,3 +71,17 @@ end
 ten_thirty(290) #2930
 
 
+
+# 3. Write a program that asks the user to enter two numbers, then prints the numbers added together.
+puts "type a number"
+num1 = gets.chomp 
+puts "type another number and i'll add them together"
+num2 = gets.chomp
+
+sum = num1.to_i + num2.to_i
+p sum
+# 4. Write a program that asks the user to enter a word, then prints that word in reverse order.
+
+# 5. Write a program that asks the user to enter a number, then prints the number times 10.
+
+# 6. Write a program that asks the user to enter two words, then prints both words on the same line in all capital letters.
