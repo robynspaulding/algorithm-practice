@@ -31,13 +31,13 @@ def nerdify(text)
   text_split = text.split("")
 
   text_split.each do |letter|
-    if letter == "a" || letter == "A"
+    if letter.downcase == "a" 
       letter = 4
       text_array << letter
-    elsif letter == "e" || letter == "E"
+    elsif letter.downcase == "e" 
       letter = 3
-      text_array << letter
-    elsif letter == "i" || letter == "I" || letter == "l" || letter == "L"
+      text_array<< letter
+    elsif letter.downcase  == "i" || letter == "l" 
       letter = 1
       text_array << letter
     else
@@ -45,7 +45,7 @@ def nerdify(text)
     end
   end
 
-  result = text_array * ""
+  result = text_array.join("")
   p result 
 end
 
