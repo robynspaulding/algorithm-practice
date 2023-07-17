@@ -21,10 +21,27 @@ p w_words
 # should return ["winner", "winner"].
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
-#     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
+hashes = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] 
+more_than_five = []
+hashes.each do |hash|
+  if hash[:price] > 5
+    more_than_five << hash 
+  end
+end
+p more_than_five
+# should return [{name: "chair", price: 100}].
 
 #  4. Start with an array of numbers and create a new array with only the even numbers.
-#     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+numbers = [2, 4, 5, 1, 8, 9, 7] 
+even_nums = []
+numbers.each do |num|
+  if num % 2 === 0
+    even_nums << num
+  end
+end
+p even_nums
+
+#should be [2, 4, 8].
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
