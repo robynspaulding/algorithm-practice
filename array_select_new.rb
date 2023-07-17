@@ -10,7 +10,15 @@ p less_than_twenty
 # should return [2, 18, 12, 3]
 
 #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
-#     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+words  = ["winner", "Winner", "chicken", "dinner"] 
+w_words = []
+words.each do |word|
+  if word[0].downcase === "w"
+    w_words << word
+  end
+end 
+p w_words
+# should return ["winner", "winner"].
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
