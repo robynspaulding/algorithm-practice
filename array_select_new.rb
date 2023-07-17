@@ -86,7 +86,21 @@ p products
 
 
 #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
-#     For example, [1, 8, 3, 10] becomes 18.
+array = [1, 8, 3, 10] 
+largest_sum = 0
+j_index = 0
+while j_index < array.length
+  j = 0
+  while j < array.length
+    if j_index != j && array[j_index] + array[j] > largest_sum 
+      largest_sum = array[j_index] + array[j]
+    end
+    j += 1
+  end
+  j_index += 1
+end
+p largest_sum
+#shoule return 18.
 
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
