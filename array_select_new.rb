@@ -64,3 +64,32 @@ items.each do |item|
 end
 p short_names
 # should return [{name: "chair", price: 100}, {name: "book", price: 4}].
+
+
+#------Loop within a loop-----
+
+#  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
+num_array = [2, 8, 3] 
+products = []
+index = 0
+while index < num_array.length
+  i = 0
+  while i < num_array.length
+    products << num_array[index]* num_array[i]
+    i += 1
+  end
+  index += 1
+end
+p products
+#should return [4, 16, 6, 16, 64, 24, 6, 24, 9].
+
+
+
+#  8. Use a nested loop to find the largest sum of any two different numbers within an array.
+#     For example, [1, 8, 3, 10] becomes 18.
+
+#  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
+#     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+
+# 10. Use a nested loop to convert an array of string arrays into a single string.
+#     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
